@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembuat QR Code</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <!-- Kontainer Utama -->
+    <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-sm">
+      <!-- Judul -->
+      <h1 class="text-xl font-bold text-gray-800 mb-4 text-center">
+        Pembuat QR Code
+      </h1>
+      <!-- Input Link -->
+      <input
+        id="linkInput"
+        type="text"
+        placeholder="Masukkan tautan di sini"
+        class="w-full px-4 py-2 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <!-- Tombol Generate -->
+      <button
+        id="generateButton"
+        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md"
+      >
+        Buat QR Code
+      </button>
+      <!-- Tempat QR Code -->
+      <div id="qrcode" class="mt-6 flex justify-center"></div>
+      <!-- Tombol Download -->
+      <button
+        id="downloadButton"
+        class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md mt-4 hidden flex items-center justify-center"
+      >
+        <svg
+          class="w-5 h-5 mr-2"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 16v-8m0 8l-4-4m4 4l4-4M4 20h16"
+          />
+        </svg>
+        Download QR Code
+      </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="dist/script.js"></script>
+  </body>
+</html>
